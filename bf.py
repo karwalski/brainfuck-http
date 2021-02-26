@@ -8,7 +8,7 @@ from time import sleep
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser(description='Interpret brainfuck code.')
 parser.add_argument('files', metavar='f', type=str, nargs=1,help='the file to interpret')
 
 fileName = parser.parse_args().files[0]
