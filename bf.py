@@ -81,12 +81,16 @@ def runCommand(command):
             controlCommand(byteList[pointer])
     elif command == 2:
         byteList[pointer] -= 1
+        if byteList[pointer] < 0:
+            byteList[pointer] = 255 # roll over instead of allowing negative (keep within one byte) - assumed feature of bf
     elif command == 3:
         byteList[pointer] += 1
+        if byteList[pointer] > 255:
+            byteList[pointer] = 0 # roll over instead of allowing 256 (keep within one byte) - assumed feature of bf
     elif command == 4:
         pointer -= 1
         if pointer < 0:
-            pointer = 0
+            byteList.insert(0, 0) # allow array to extend to the left (non-standard bf feature)
     elif command == 5:
         pointer += 1
         if len(byteList) < pointer + 1:
