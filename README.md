@@ -34,6 +34,9 @@ The ASCII control characters are used to determine between HTTP headers and the 
 http://jkorpela.fi/chars/c0.html
 
 ## Version
+### 1.1
+Added a non-standard feature to infinite extend array to the left. Added rollover of bytes from 0 <-> 255 to keep within one byte.
+
 ### 1.0
 This release has a working interpretter of brainfuck, and was tested with a series of braindfuck scripts with limited complexity. Whilst it allows an unlimited depth of loops, and unlimited number of bytes - it was not designed for scalability and would likely hit python and system memory limitations at some point.
 This version does not have any working HTTP functionality.
