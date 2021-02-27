@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 title = "Brainfuck Interpreter by Matthew Watt"
-version = 1.0
+version = 1.1
 
 import requests, argparse, os, re, ast, numpy as np
 from time import sleep
